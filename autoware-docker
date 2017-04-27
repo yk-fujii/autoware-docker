@@ -1,0 +1,9 @@
+#!/bin/bash
+nvidia-docker run --rm \
+-e DISPLAY=$DISPLAY  \
+-v /home/$USER:/home/autoware \
+-v /tmp/.X11-unix/:/tmp/.X11-unix \
+--workdir=/home/autoware \
+-i -t \
+tieriv/autoware:indigo \
+/bin/bash
